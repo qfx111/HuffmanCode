@@ -8,13 +8,13 @@ namespace HuffmanCodeWithCSharp
 {
     class HuffmanNode : IComparable<HuffmanNode>
     {
-        public string symbol;   // For the character of char value. Public because Process class use it.
-        public int frequency;          // Number of the count on file, string, text.
+        public string symbol;   // Для значения чаров
+        public int frequency;          // Частота в файле, тексте
         public string code;            // Getting from a tree for making a huffman tree.
         public HuffmanNode parentNode; // Parent Node of current Node.
         public HuffmanNode leftTree;   // Left Node of current Node.
         public HuffmanNode rightTree;  // Right Node of current Node.
-        public bool isLeaf;            // Shows it is a leaf.
+        public bool isLeaf;            // Это потомок?
 
 
         public HuffmanNode(string value)  // Creating a Node with given value(character).
