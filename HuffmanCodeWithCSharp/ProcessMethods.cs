@@ -14,7 +14,7 @@ namespace HuffmanCodeWithCSharp
     class ProcessMethods
     {
         string streamedF;
-        //  Creates a Node List that reading the characters on the file.
+        //  Создаёт нод лист и считывает чары с файла
         public List<HuffmanNode> getListFromFile()
         {
             List<HuffmanNode> nodeList = new List<HuffmanNode>();  // Node List.
@@ -24,6 +24,7 @@ namespace HuffmanCodeWithCSharp
             String filename = Console.ReadLine();
             try
             {
+               
                 // Creating a new unique node that reading from the file.
                 // If it is the same character, increase the frequency of the value. It is possiple with "frequencyIncreas()" method.
                 FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
@@ -48,7 +49,7 @@ namespace HuffmanCodeWithCSharp
         }
 
 
-        //  Creates a Tree according to Nodes(frequency, symbol)
+        //  Создаёт дерево основываясь на Nodes(frequency, symbol)
         public void getTreeFromList(List<HuffmanNode> nodeList)
         {
             while (nodeList.Count > 1)  // 1 because a tree need 2 leaf to make a new parent.
@@ -63,7 +64,7 @@ namespace HuffmanCodeWithCSharp
         }
 
 
-        // Setting the codes of the nodes of tree. Recursive method.
+        // Ставит коды узлов дерева. Рекурсия
         public void setCodeToTheTree(string code, HuffmanNode Nodes)
         {
             if (Nodes == null)
